@@ -8,7 +8,10 @@ export function HomePage() {
 
     return (
         <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
-            {images.map((image, i) => i === 1 && widthNow < 1000 ? '' : <img style={{width: '480px', padding: '10px', marginTop: '18vh'}} src={image}/>)}
+            {images.map((image, i) => 
+            i === 1 && widthNow < 1000 ? '' 
+            : widthNow < 1000 ? <img style={{width: '60vw', padding: '10px', marginTop: '18vh'}} src={image}/> 
+            : <img style={{width: '40vw', padding: '10px', marginTop: '18vh'}} src={image}/>)}
         </div>
 
     )

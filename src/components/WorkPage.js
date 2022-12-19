@@ -24,9 +24,9 @@ function WorkPage( {image}) {
     const ref = useRef(null);
     const [height, setHeight] = useState(0);
 
-    useLayoutEffect(() => {
-        setHeight(ref.current.clientHeight);
-    }, []);
+//    useLayoutEffect(() => {
+//        setHeight(ref.current.clientHeight);
+//    }, []);
 
     const widthNow = Component3()
 
@@ -35,13 +35,14 @@ function WorkPage( {image}) {
             <>
                 {imgChoice.map((image,i) => 
                         <img style= {{
-                            width: widthNow > 667 ? '600px' : widthNow*.9, 
-                            marginTop: i === 0 ?'100px' : '-100px', 
-                            marginBottom: widthNow > 1200 ? '200px' : '0px', 
+                            width: widthNow > 900 ? widthNow*.5 : widthNow*.9, 
+                            marginTop: '100px', 
                             opacity: i === 0 ? imageOpacity : 1-imageOpacity, 
                             transition: '100ms', 
                             position: i === 1 ? 'absolute' : '',
-                            marginRight: widthNow < 900 ? 0 : widthNow - 900, 
+                            paddingLeft: '30px', 
+                            paddingRight: '30px', 
+                            marginBottom: widthNow > 900 ? '15vw' : 0
                         }}
                         src={image} 
                         onMouseOver={()=>setArrowOpacity(.33)} 
@@ -52,13 +53,13 @@ function WorkPage( {image}) {
     
 
     return (
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+        <div style={{display: 'flex', alignItems: 'flex-end', flexDirection: widthNow > 900 ? 'row' : 'column'}}>
             <ImgSelect />                        
             <MapArrows2 arrowOpacity={arrowOpacity} setArrowOpacity={setArrowOpacity} setImageNow={setImageNow} imgLength={image.photo.length} imgNow={imageNow} setImageOpacity={setImageOpacity} width={widthNow}/>
-            <div ref={ref} style={{position: widthNow > 1200 ? 'absolute' : '',  marginRight: widthNow > 1200 ? '-650px' : widthNow > 900 ? widthNow - 900 : '0', width: widthNow > 1200 ? '350px' : widthNow > 667 ? '600px' : widthNow * .9, marginBottom: widthNow > 1200 ? height-245 : '', height: widthNow > 1200 ? '' : 200}}>
-                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>{image.title}</div>
-                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>{image.location}</div>
-                <>{image.description}</>
+            <div style={{width: widthNow > 900 ? '350px' : widthNow * .93, height: widthNow > 900 ? '' : 200, marginBottom: '15vw'}}>
+                <div style={{fontSize: '1.3em', marginBottom: '10px'}}>{image.title}</div>
+                <div style={{fontSize: '1.1em', marginBottom: '10px'}}>{image.location}</div>
+                <div style={{}}>{image.description}</div>
             </div>
         </div>
     )
@@ -66,7 +67,7 @@ function WorkPage( {image}) {
 
 
 function MapArrows2({arrowOpacity, setArrowOpacity, setImageNow, imgLength, imgNow, setImageOpacity, width}) {
-    const arrows = [{name: leftArrow, marginRight: 1, trueMarginRight: width < 900 ? Math.min(575,width-50) : width - 330},{name: rightArrow, marginRight: -1,  trueMarginRight: width < 900 ? Math.min(575,width-50) : width - 710}]
+    const arrows = [{name: leftArrow, marginRight: 1},{name: rightArrow, marginRight: -1}]
     const curImg = imgNow.cur
     return(
         <>
@@ -76,9 +77,10 @@ function MapArrows2({arrowOpacity, setArrowOpacity, setImageNow, imgLength, imgN
                         transition: '200ms', 
                         position: 'absolute', 
                         height: '100px', 
-                        marginRight: i === 0 && width < 900 ? Math.min(575,width*.9-30) : i === 0 ? width - 330 : i === 1 && width > 900 ? width -1465 : '',
-                        marginLeft: i === 1 && width < 900 ? Math.min(575,width*.9-30) : '',
-                        marginBottom: '90px'}} 
+                        paddingLeft: width > 900 ? i === 0  ? 30 : width*.5 : '',
+                        paddingRight: width < 900 ? i === 1  ? 30 : width*.9 : '',
+                        marginTop: width < 900 ? width*.33 : 0,
+                        marginBottom: width > 900 ? `calc(15vw + ${width*.5*.2}px)`: 0}} 
                         src={arrow.name} 
                         onClick={()=> {
                             setTimeout(() => setImageOpacity(.9),0)

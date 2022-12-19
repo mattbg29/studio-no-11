@@ -20,9 +20,8 @@ function App() {
 
 
   return (
-    <div style={{fontFamily: 'Europa'}}>
+    <div style={{fontFamily: 'Europa', color: 'hsl(0, 0%, 40%)', fontSize: '.8em', backgroundColor: 'white'}}>
       {!screenGone ? <Landing showIt={loadScreen} /> : <MainPage />}
-      <h1 style={{fontSize: 0}}>hi</h1>
     </div>
   );
 }

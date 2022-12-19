@@ -11,10 +11,10 @@ export default function MainPage() {
   
     return (
         <>
-            <div style={{display: 'flex', flexDirection: 'row', width: '99vw', justifyContent: 'space-between', position: 'fixed', backgroundColor: 'white', zIndex: '99'}}>
-                <img style={{width: '125px', height: 'auto', padding: 20, cursor: 'pointer'}} src={logo} onClick={() => setCurPage('Home')}/>        
+            <div style={{display: 'flex', flexDirection: 'row', width: '99vw', justifyContent: 'space-between', position: 'fixed', backgroundColor: 'white', zIndex: '99', alignItems: 'center'}}>
+                <img style={{width: '150px', height: 'auto', padding: 20, cursor: 'pointer'}} src={logo} onClick={() => setCurPage('Home')}/>        
                 <div style={{display: 'flex', flexDirection: 'row'}}>
-                    {pages.map(page => <div className="menu" onClick={() => setCurPage(page)}>{page}</div>)}
+                    {pages.map(page => <div className="menu" style={{color: page === curPage ? 'black' : ''}} onClick={() => setCurPage(page)}>{page}</div>)}
                 </div>
             </div>
             {curPage === 'Work' && <WorkPage2 />}

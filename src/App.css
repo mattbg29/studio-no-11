@@ -65,6 +65,11 @@
   padding: 20px;
 }
 
+.menu:hover {
+  color: black
+}
+
+
 .font-link {
   font-family: 'Europa'
 }
