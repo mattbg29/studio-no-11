@@ -20,7 +20,7 @@ function App() {
 
 
   return (
-    <div>
+    <div style={{fontFamily: 'Europa'}}>
       {!screenGone ? <Landing showIt={loadScreen} /> : <MainPage />}
       <h1 style={{fontSize: 0}}>hi</h1>
     </div>
