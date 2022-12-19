@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+.photo {
+  height: 300px;
+  width: 500px;
+}
+
+.logo {
+  transition: 2500ms;
+  opacity: 1;
+}
+
+.logo-hide {
+  transition: 2500ms;
+  opacity: 0;
+}
+
+.paragraph {
+  padding: 20px;
+}
+
+.button {
+  outline: aqua
+}
+
+.menu {
+  cursor: pointer;
+  padding: 20px;
+}
+
+
+@font-face {
+  font-family: europa;
+  src: url("https://use.typekit.net/fqz5pef.css");
+}
+
+/**
+@font-face {
+  font-family: "new";
+  src: url("./fonts/Raleway-Thin.ttf");
+}
+**/
