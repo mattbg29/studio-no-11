@@ -10,10 +10,11 @@ function App() {
   const [screenGone, setScreenGone] = useState(false)
 
   useEffect(() => {
-    setLoadScreen(true)
+    const time0 = setTimeout(() => setLoadScreen(true), 100)
     const time1 = setTimeout(() => setLoadScreen(false), 2500)
     const time2 = setTimeout(() => setScreenGone(true), 5000)
     return () => {
+      clearTimeout(time0)
       clearTimeout(time1)
       clearTimeout(time2)
     }

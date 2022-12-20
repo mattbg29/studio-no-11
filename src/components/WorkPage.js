@@ -47,10 +47,10 @@ function WorkPage( {image}) {
     
 
     return (
-        <div style={{display: 'flex', alignItems: 'flex-end', flexDirection: widthNow > 900 ? 'row' : 'column'}}>
+        <div style={{display: 'flex', alignItems: 'flex-end', flexDirection: widthNow > 900 ? 'row' : 'column', paddingTop: '40px', paddingLeft: widthNow > 900 ? '5vw' : ''}}>
             <ImgSelect />                        
             <MapArrows2 arrowOpacity={arrowOpacity} setArrowOpacity={setArrowOpacity} setImageNow={setImageNow} imgLength={image.photo.length} imgNow={imageNow} setImageOpacity={setImageOpacity} width={widthNow}/>
-            <div style={{width: widthNow > 900 ? '350px' : widthNow*.9, height: widthNow > 900 ? '' : 200, marginBottom: '15vw', marginRight: 30}}>
+            <div style={{width: widthNow > 900 ? '350px' : widthNow*.9, height: widthNow > 900 ? '' : 200, marginBottom: widthNow > 900 ? '15vw' : '', marginRight: 30}}>
                 <div style={{fontSize: '1.3em', marginBottom: '10px'}}>{image.title}</div>
                 <div style={{fontSize: '1.1em', marginBottom: '10px'}}>{image.location}</div>
                 <div style={{}}>{image.description}</div>

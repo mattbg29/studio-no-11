@@ -14,13 +14,19 @@
     "categories": {
       "function": {
         "contactformuploader": {
-          "sesEmail": "danielle@studiono11.com",
           "deploymentBucketName": "amplify-studiono11-dev-124218-deployment",
-          "s3Key": "amplify-builds/contactformuploader-782b5a4d663352363949-build.zip"
+          "s3Key": "amplify-builds/contactformuploader-54726e36367651666935-build.zip",
+          "sesEmail": "danielle@studiono11.com"
         }
       },
       "api": {
         "studiono11": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2cf08dyj1pu9i",
+          "type": "manual"
+        }
       }
     }
   }
