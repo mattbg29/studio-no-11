@@ -21,12 +21,6 @@ function WorkPage( {image}) {
     const [imageNow, setImageNow] = useState({cur: 0, old: 1})
     const [imageOpacity, setImageOpacity] = useState(1)
     const imgChoice = [image.photo[imageNow.cur], image.photo[imageNow.old]]
-    const ref = useRef(null);
-    const [height, setHeight] = useState(0);
-
-//    useLayoutEffect(() => {
-//        setHeight(ref.current.clientHeight);
-//    }, []);
 
     const widthNow = Component3()
 
@@ -42,7 +36,7 @@ function WorkPage( {image}) {
                             position: i === 1 ? 'absolute' : '',
                             paddingLeft: '30px', 
                             paddingRight: '30px', 
-                            marginBottom: widthNow > 900 ? '15vw' : 0
+                            marginBottom: widthNow > 900 ? '15vw' : 10
                         }}
                         src={image} 
                         onMouseOver={()=>setArrowOpacity(.33)} 
@@ -56,7 +50,7 @@ function WorkPage( {image}) {
         <div style={{display: 'flex', alignItems: 'flex-end', flexDirection: widthNow > 900 ? 'row' : 'column'}}>
             <ImgSelect />                        
             <MapArrows2 arrowOpacity={arrowOpacity} setArrowOpacity={setArrowOpacity} setImageNow={setImageNow} imgLength={image.photo.length} imgNow={imageNow} setImageOpacity={setImageOpacity} width={widthNow}/>
-            <div style={{width: widthNow > 900 ? '350px' : widthNow * .93, height: widthNow > 900 ? '' : 200, marginBottom: '15vw'}}>
+            <div style={{width: widthNow > 900 ? '350px' : widthNow*.9, height: widthNow > 900 ? '' : 200, marginBottom: '15vw', marginRight: 30}}>
                 <div style={{fontSize: '1.3em', marginBottom: '10px'}}>{image.title}</div>
                 <div style={{fontSize: '1.1em', marginBottom: '10px'}}>{image.location}</div>
                 <div style={{}}>{image.description}</div>

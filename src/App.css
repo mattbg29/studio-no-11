@@ -45,11 +45,13 @@
 .logo {
   transition: 2500ms;
   opacity: 1;
+  max-width: 90vw;
 }
 
 .logo-hide {
   transition: 2500ms;
   opacity: 0;
+  max-width: 90vw;
 }
 
 .paragraph {
@@ -69,6 +71,18 @@
   color: black
 }
 
+.contact {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.contact:hover {
+  text-decoration-color: black;
+}
+
+.contactSubmit:hover{
+  color: black;
+}
 
 .font-link {
   font-family: 'Europa'

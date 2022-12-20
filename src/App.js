@@ -3,6 +3,8 @@ import Landing from './components/LoadingPage';
 import { useEffect, useState } from 'react';
 import MainPage from './components/MainPage';
 
+
+
 function App() {
   const [loadScreen, setLoadScreen] = useState(false)
   const [screenGone, setScreenGone] = useState(false)
@@ -16,8 +18,6 @@ function App() {
       clearTimeout(time2)
     }
   }, [])
-
-
 
   return (
     <div style={{fontFamily: 'Europa', color: 'hsl(0, 0%, 40%)', fontSize: '.8em', backgroundColor: 'white'}}>

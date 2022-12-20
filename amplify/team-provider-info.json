@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-studiono11-dev-124218-authRole",
+      "UnauthRoleArn": "arn:aws:iam::174818985139:role/amplify-studiono11-dev-124218-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::174818985139:role/amplify-studiono11-dev-124218-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-studiono11-dev-124218-deployment",
+      "UnauthRoleName": "amplify-studiono11-dev-124218-unauthRole",
+      "StackName": "amplify-studiono11-dev-124218",
+      "StackId": "arn:aws:cloudformation:us-east-1:174818985139:stack/amplify-studiono11-dev-124218/7cfbd5b0-7fc4-11ed-ab01-12f41fa9589d",
+      "AmplifyAppId": "d1iwbjq5abknii"
+    },
+    "categories": {
+      "function": {
+        "contactformuploader": {
+          "sesEmail": "danielle@studiono11.com",
+          "deploymentBucketName": "amplify-studiono11-dev-124218-deployment",
+          "s3Key": "amplify-builds/contactformuploader-782b5a4d663352363949-build.zip"
+        }
+      },
+      "api": {
+        "studiono11": {}
+      }
+    }
+  }
+}
