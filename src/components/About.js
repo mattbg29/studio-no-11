@@ -1,4 +1,4 @@
-import founder from './founder.jpg'
+import founder from '../assets/founder.jpg'
 import { Component3 } from './Dimensons'
 
 export default function AboutPage() {

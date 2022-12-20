@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -34,8 +34,3 @@ export const Component3 = () => {
 };
 
 
-/*
-<div>
-width: {width} ~ height: {height}
-</div>
-*/

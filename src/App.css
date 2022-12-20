@@ -88,6 +88,14 @@
   font-family: 'Europa'
 }
 
+a {
+  color: rgb(102,102,102);
+}
+
+a:hover {
+  text-decoration-color: black;
+}
+
 
 @font-face {
   font-family:"europa";

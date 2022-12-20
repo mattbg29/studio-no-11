@@ -1,4 +1,4 @@
-import services_main from './services_main.jpg'
+import services_main from '../assets/services_main.jpg'
 import { Component3 } from './Dimensons'
 
 

@@ -1,4 +1,4 @@
-import founder from './founder.jpg'
+import founder from '../assets/founder.jpg'
 import { Component3 } from './Dimensons'
 import { useState } from 'react'
 import ContactCard from './ContactCard'
@@ -15,8 +15,9 @@ export default function AboutPage() {
                 <div style={{marginBottom: 10}}>For new project inquiries, please contact:</div>
                     <div>Danielle Lands</div>
                     <div>Founder + Lead Designer</div>
-                    <div>danielle@studiono11</div>
+                    <a href='mailto:danielle@studiono11'>danielle@studiono11</a>
                     <div>215-528-2647</div>
+                    <a href='https://www.instagram.com/studio.no.11/'>Instagram</a>
                     <div style={{marginTop: 20}}>To request a lecture or to engage studio No. 11 in speaking engagements, panel debates, conferences, and the like, please fill out <span className='contact' onClick={() => setShowForm(true)}>this form</span></div>
                 </div>
             </div>}
@@ -25,13 +26,3 @@ export default function AboutPage() {
 }
 
 
-
-
-/*
-<div style={{marginBottom: 10}}>For new project inquiries, please contact:</div>
-<div>Danielle Lands</div>
-<div>Founder + Lead Designer</div>
-<div>danielle@studiono11</div>
-<div>215-528-2647</div>
-<div style={{marginTop: 10}}>Lectures & speaking engagements:</div>
-*/
